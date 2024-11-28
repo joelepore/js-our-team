@@ -39,5 +39,21 @@ const teamMembers = [
 
 const cardTemplate = document.querySelector('.col');
 const row = document.querySelector('.row');
+const btn = document.querySelector('button');
 
 renderCards(row, teamMembers, cardTemplate);
+
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const inputs = Array.from(document.querySelectorAll('input'));
+
+  teamMembers.push({
+    name: inputs[0].value.trim(),
+    role: inputs[1].value.trim(),
+    email: inputs[2].value.trim(),
+    img: inputs[3].value.trim(),
+  })
+
+  renderCards(row, teamMembers, cardTemplate)
+});
