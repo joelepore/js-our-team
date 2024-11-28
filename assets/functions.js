@@ -1,5 +1,5 @@
 const createCardElement = (cardTemplate, teamMember) => {
-  // Clono la card di template con il metodo cloneNode()
+  // Clono la card di template con il metodo cloneNode() in quanto non e' possibile clonare un nodo con spread operator
   const newCard = cardTemplate.cloneNode(true);
   const { name, role, email, img } = teamMember;
 
