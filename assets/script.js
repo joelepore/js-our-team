@@ -36,3 +36,8 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+const cardTemplate = document.querySelector('.col');
+const row = document.querySelector('.row');
+
+renderCards(row, teamMembers, cardTemplate);
